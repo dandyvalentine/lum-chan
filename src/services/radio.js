@@ -3,7 +3,7 @@
  * @author Allan D. Boswell
  * @license GPL-3.0
  * @version 1.0.0
- * @description Configures the radio service for application.
+ * @description Configures the radio service for the application.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
