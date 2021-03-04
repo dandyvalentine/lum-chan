@@ -1,0 +1,30 @@
+{
+    "bot": [
+        {
+            "version": "1.0.0",
+            "developer": "806051504460005377",
+            "production": "816403031520051291",
+            "development": "816473349282070548"
+        }
+    ],
+    "guild": [
+        {
+            "guild_1": [
+                {
+                    "guild_id": "816469264827285514",
+                    "owner_id": "806051504460005377",
+                    "text_channel_id": "816478350519697428",
+                    "voice_channel_id": "816499454550605824"
+                }
+            ],
+            "guild_2": [
+                {
+                    "guild_id": "762235433353609218",
+                    "owner_id": "",
+                    "text_channel_id": "",
+                    "void_channel_id": ""
+                }
+            ]
+        }
+    ]
+}
