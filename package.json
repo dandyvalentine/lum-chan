@@ -11,6 +11,7 @@
   "description": "A Discord bot for those who enjoy listening to the Urusei Yatsura soundtrack.",
   "dependencies": {
     "@discordjs/opus": "^0.4.0",
+    "cron": "^1.8.2",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "ytdl-core-discord": "^1.2.5"
