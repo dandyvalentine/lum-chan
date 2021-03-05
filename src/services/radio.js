@@ -18,6 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+const { CronJob } = require('cron');
 const YTDL = require('ytdl-core-discord');
 const UTILS = require('../utils/settings');
 
@@ -28,32 +29,35 @@ const _TITLES = [PLAYLIST.TRACK00[0].TITLE, PLAYLIST.TRACK01[0].TITLE, PLAYLIST.
 
 let _i = 0;
 let _channel = null;
+let _blocked = false;
+let _playing = false;
 let _connection = null;
 let _dispatcher = null;
 
 async function _play(client, connection) {
-  _dispatcher = connection.play(await YTDL(_TRACKS[_i]), { type: 'opus' });
+  _dispatcher = connection.play(await YTDL(_TRACKS[_i]), { type: 'opus', volume: false, highWaterMark: 50 });
 
   _dispatcher.on('start', () => {
     client.user.setActivity(_TITLES[_i], { type: 'PLAYING' });
   });
 
   _dispatcher.on('finish', () => {
-    if (_i === 23) {
+    if (_i === 23 && _playing) {
       _i = 0;
+      _playing = false;
+
+      connection.disconnect();
     } else {
       _i = _i + 1;
+
+      _play(client, connection);
     }
-
-    _play(client, connection);
-  });
-
-  _dispatcher.on('error', () => {
-    console.error;
   });
 }
 
 module.exports.start = async function (client) {
+  _playing = true;
+
   try {
     if (UTILS.development()) {
       _channel = client.channels.cache.get(UTILS.dandy_guild_voice_channel_id()) || (await client.channels.fetch(UTILS.dandy_guild_voice_channel_id()));
@@ -69,6 +73,67 @@ module.exports.start = async function (client) {
       _play(client, _connection);
     }
   } catch (error) {
+    _i = 0;
+    _channel = null;
+    _blocked = false;
+    _playing = false;
+    _connection = null;
+    _dispatcher = null;
+
     console.log(error);
+  }
+};
+
+module.exports.queue = async function (client) {
+  let schedule = new CronJob('*/10 * * * * *', async () => {
+    if (!_blocked && !_playing) {
+      try {
+        if (UTILS.development()) {
+          _channel = client.channels.cache.get(UTILS.dandy_guild_voice_channel_id()) || (await client.channels.fetch(UTILS.dandy_guild_voice_channel_id()));
+        } else {
+          _channel = client.channels.cache.get(UTILS.urusei_guild_voice_channel_id()) || (await client.channels.fetch(UTILS.urusei_guild_voice_channel_id()));
+        }
+
+        if (!_channel) {
+          return;
+        } else {
+          _playing = true;
+          _connection = await _channel.join();
+
+          _play(client, _connection);
+        }
+      } catch (error) {
+        _i = 0;
+        _channel = null;
+        _blocked = false;
+        _playing = false;
+        _connection = null;
+        _dispatcher = null;
+
+        console.log(error);
+      }
+    }
+  });
+
+  schedule.start();
+};
+
+module.exports.restart = async function () {
+  try {
+    _connection.disconnect();
+
+    _i = 0;
+    _channel = null;
+    _blocked = false;
+    _playing = false;
+    _connection = null;
+    _dispatcher = null;
+  } catch (error) {
+    _i = 0;
+    _channel = null;
+    _blocked = false;
+    _playing = false;
+    _connection = null;
+    _dispatcher = null;
   }
 };
