@@ -26,6 +26,33 @@ const CLIENT = new Client();
 
 CLIENT.once('ready', () => {
   RADIO.start(CLIENT);
+  RADIO.queue(CLIENT);
+});
+
+CLIENT.on('guildCreate', (guild) => {
+  if (UTILS.development()) {
+    if (guild.id !== UTILS.dandy_guild_id()) {
+      CLIENT.guilds.cache
+        .get(guild.id)
+        .leave()
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      RADIO.restart();
+    }
+  } else {
+    if (guild.id !== UTILS.urusei_guild_id()) {
+      CLIENT.guilds.cache
+        .get(guild.id)
+        .leave()
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      RADIO.restart();
+    }
+  }
 });
 
 CLIENT.login(UTILS.token());
