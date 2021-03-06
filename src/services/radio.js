@@ -118,20 +118,61 @@ module.exports.queue = async function (client) {
   schedule.start();
 };
 
-module.exports.restart = async function () {
+module.exports.restart = async function (client) {
+  client.user.setActivity();
+
   try {
     _connection.disconnect();
 
     _i = 0;
     _channel = null;
-    _blocked = false;
     _playing = false;
     _connection = null;
     _dispatcher = null;
   } catch (error) {
     _i = 0;
     _channel = null;
-    _blocked = false;
+    _playing = false;
+    _connection = null;
+    _dispatcher = null;
+  }
+};
+
+module.exports.pause = async function () {
+  try {
+    _dispatcher.pause(true);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports.resume = async function () {
+  try {
+    _dispatcher.resume();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports.connect = async function () {
+  _blocked = false;
+};
+
+module.exports.disconnect = async function (client) {
+  _blocked = true;
+  client.user.setActivity();
+
+  try {
+    _connection.disconnect();
+
+    _i = 0;
+    _channel = null;
+    _playing = false;
+    _connection = null;
+    _dispatcher = null;
+  } catch (error) {
+    _i = 0;
+    _channel = null;
     _playing = false;
     _connection = null;
     _dispatcher = null;
