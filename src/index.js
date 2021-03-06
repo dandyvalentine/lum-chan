@@ -265,7 +265,13 @@ CLIENT.on('voiceStateUpdate', (previous, current) => {
   if (current.channel) {
     return;
   } else if (previous.channel) {
-    RADIO.disconnect(CLIENT);
+    let user = previous.member.user.id;
+
+    if (user === UTILS.client_development_id() || user === UTILS.client_production_id()) {
+      RADIO.disconnect(CLIENT);
+    } else {
+      return;
+    }
   } else {
     return;
   }
