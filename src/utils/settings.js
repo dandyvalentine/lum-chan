@@ -33,14 +33,18 @@ const _CLIENT_PRODUCTION_ID = CONFIGURATION.bot[0].production;
 const _CLIENT_DEVELOPMENT_ID = CONFIGURATION.bot[0].development;
 
 const _DANDY_GUILD_ID = CONFIGURATION.guild[0].guild_1[0].guild_id;
+const _DANDY_GUILD_PREFIX = CONFIGURATION.guild[0].guild_1[0].prefix;
 const _DANDY_GUILD_OWNER_ID = CONFIGURATION.guild[0].guild_1[0].owner_id;
 const _DANDY_GUILD_TEXT_CHANNEL_ID = CONFIGURATION.guild[0].guild_1[0].text_channel_id;
 const _DANDY_GUILD_VOICE_CHANNEL_ID = CONFIGURATION.guild[0].guild_1[0].voice_channel_id;
+const _DANDY_GUILD_PREFIX_ALTERNATIVE = CONFIGURATION.guild[0].guild_1[0].prefix_alternative;
 
 const _URUSEI_GUILD_ID = CONFIGURATION.guild[0].guild_2[0].guild_id;
+const _URUSEI_GUILD_PREFIX = CONFIGURATION.guild[0].guild_2[0].prefix;
 const _URUSEI_GUILD_OWNER_ID = CONFIGURATION.guild[0].guild_2[0].owner_id;
 const _URUSEI_GUILD_TEXT_CHANNEL_ID = CONFIGURATION.guild[0].guild_2[0].text_channel_id;
 const _URUSEI_GUILD_VOICE_CHANNEL_ID = CONFIGURATION.guild[0].guild_2[0].voice_channel_id;
+const _URUSEI_GUILD_PREFIX_ALTERNATIVE = CONFIGURATION.guild[0].guild_2[0].prefix_alternative;
 
 module.exports.development = function () {
   return _DEVELOPMENT;
@@ -74,6 +78,10 @@ module.exports.dandy_guild_id = function () {
   return _DANDY_GUILD_ID;
 };
 
+module.exports.dandy_guild_prefix = function () {
+  return _DANDY_GUILD_PREFIX;
+};
+
 module.exports.dandy_guild_owner_id = function () {
   return _DANDY_GUILD_OWNER_ID;
 };
@@ -86,8 +94,16 @@ module.exports.dandy_guild_voice_channel_id = function () {
   return _DANDY_GUILD_VOICE_CHANNEL_ID;
 };
 
+module.exports.dandy_guild_prefix_alternative = function () {
+  return _DANDY_GUILD_PREFIX_ALTERNATIVE;
+};
+
 module.exports.urusei_guild_id = function () {
   return _URUSEI_GUILD_ID;
+};
+
+module.exports.urusei_guild_prefix = function () {
+  return _URUSEI_GUILD_PREFIX;
 };
 
 module.exports.urusei_guild_owner_id = function () {
@@ -100,4 +116,8 @@ module.exports.urusei_guild_text_channel_id = function () {
 
 module.exports.urusei_guild_voice_channel_id = function () {
   return _URUSEI_GUILD_VOICE_CHANNEL_ID;
+};
+
+module.exports.urusei_guild_prefix_alternative = function () {
+  return _URUSEI_GUILD_PREFIX_ALTERNATIVE;
 };
