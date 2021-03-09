@@ -1,9 +1,9 @@
 /**
- * @file Playlist instructions for application.
+ * @file Radio instructions for application.
  * @author Allan D. Boswell
  * @license GPL-3.0
  * @version 2.0.0
- * @description Processes instructions involving the playlist.
+ * @description Processes instructions involving the radio.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
