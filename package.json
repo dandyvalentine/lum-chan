@@ -1,0 +1,30 @@
+{
+  "bugs": {
+    "url": "https://github.com/dandyvalentine/lum-chan/issues"
+  },
+  "main": "./src/main.js",
+  "name": "lum-chan",
+  "author": "Allan D. Boswell",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "start": "node ."
+  },
+  "version": "2.0.0",
+  "homepage": "https://github.com/dandyvalentine/lum-chan#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandyvalentine/lum-chan.git"
+  },
+  "description": "Lum-chan! is an unofficial, open-source application for those who enjoy listening to the Urusei Yatsura (うる星やつら) original soundtrack.",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "mongoose": "^5.11.15"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
+  }
+}
