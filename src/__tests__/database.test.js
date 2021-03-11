@@ -78,9 +78,8 @@ describe('Verifying Configuration Document...', () => {
     });
 
     if (configuration) {
-      expect.assertions(3);
+      expect.assertions(2);
 
-      expect(configuration.feature).toBe(feature);
       expect(configuration.feature.level).toBeFalsy();
       expect(configuration.feature.music).toBeFalsy();
     } else {
