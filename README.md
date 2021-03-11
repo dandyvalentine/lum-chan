@@ -1,9 +1,12 @@
+[discord-invite]: https://discord.gg/6F8HdGK3VE
+[discord-shield]: https://discord.com/api/guilds/762235433353609218/widget.png
+
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dandyvalentine/lum-chan/Lum-chan!%20Control%20Integration)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-![discord-shield](https://discord.com/api/guilds/762235433353609218/widget.png)
 ![GitHub issues](https://img.shields.io/github/issues/dandyvalentine/lum-chan?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/dandyvalentine/lum-chan?style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/dandyvalentine/lum-chan?style=flat-square)
+[ ![discord-shield][] ][discord-invite]
 
 <img align="right" src="https://i.pinimg.com/originals/d7/13/04/d713046ec7931651e0e2996450d58cfb.gif?raw=true" height="226" width="244">
 
