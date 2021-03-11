@@ -6,3 +6,6 @@
 
 # Lum-chan! #
 _Lum-chan!_ is an unofficial, open-source application for those who enjoy listening to the [_Urusei Yatsura_](https://en.wikipedia.org/wiki/Urusei_Yatsura) 「うる星やつら」 original soundtrack. Alternatively, _Lum-chan!_ encompasses a multipurpose functionality approach in order to keep things [**weird and fun**](https://www.youtube.com/watch?v=0kn2_euTNrU). This application is written in [JavaScript](https://www.javascript.com/) (with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) in mind) while utilizing a third-party library, [discord.js](https://discord.js.org/#/), for interaction with the [Discord](https://discord.com/) [_Application Programming Interface_](https://discord.com/developers/docs/intro) (API). The source code is [licensed](LICENSE) according to **GNU General Public License v3.0 (only)**.
+
+## Notice of Non-Affiliation and Disclaimer ##
+This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with [_Rumiko Takahashi_](https://en.wikipedia.org/wiki/Rumiko_Takahashi), [Shogakukan](https://www.shogakukan.co.jp/), [Viz Media](https://www.viz.com/), or any of their subsidiaries or affiliates. _Urusei Yatsura_, as well as the visual representation and likeness of _Lum_, are registered trademarks of their respective owners.
