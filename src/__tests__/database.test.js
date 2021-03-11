@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const Configuration = require('../models/configuration.model');
 
 beforeAll(async (done) => {
-  const url =
-    'mongodb+srv://lum:LHDQy4aJkjP0Bp7x@cluster-0.nnum4.mongodb.net/github?retryWrites=true&w=majority';
+  const url = process.env.MONGODB_ATLAS_URI;
 
   await mongoose.connect(url, {
     useCreateIndex: true,
