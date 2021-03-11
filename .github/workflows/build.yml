@@ -26,7 +26,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env:
         UUID: ${{ secrets.UUID }}
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         MONGODB_ATLAS_URI: ${{ secrets.MONGODB_ATLAS_URI }}
