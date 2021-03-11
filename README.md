@@ -1,4 +1,6 @@
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dandyvalentine/lum-chan/build?style=flat-square)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+![GitHub issues](https://img.shields.io/github/issues/dandyvalentine/lum-chan?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/dandyvalentine/lum-chan?style=flat-square)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/dandyvalentine/lum-chan?style=flat-square)
 
