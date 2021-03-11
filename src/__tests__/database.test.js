@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Configuration = require('../models/configuration.model');
 
-beforeAll(async (done) => {
+beforeEach(async (done) => {
   const url = process.env.MONGODB_ATLAS_URI;
 
   await mongoose.connect(url, {
@@ -69,7 +69,7 @@ describe('Verifying Configuration Document...', () => {
   });
 });
 
-afterAll(async (done) => {
+afterEach(async (done) => {
   mongoose.connection.close();
 
   done();
