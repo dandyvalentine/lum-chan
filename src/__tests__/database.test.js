@@ -86,6 +86,108 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+  // Validate the license...
+  it('License', async (done) => {
+    expect.assertions(1);
+
+    const license =
+      'https://github.com/dandyvalentine/lum-chan/blob/main/LICENSE';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.license).toBe(license);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+  // Validate the version...
+  it('Version', async (done) => {
+    expect.assertions(1);
+
+    const version = '2.0.0';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.version).toBe(version);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+  // Validate the Client ID...
+  it('Client ID', async (done) => {
+    expect.assertions(1);
+
+    const client_id = '816473349282070548';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.client_id).toBe(client_id);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+  // Validate the mention ID...
+  it('Mention ID', async (done) => {
+    expect.assertions(1);
+
+    const mention_id = '<@!816473349282070548>';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.mention_id).toBe(mention_id);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+  // Validate the maintenance variable...
+  it('Maintenance', async (done) => {
+    expect.assertions(1);
+
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.maintenance).toBeTruthy();
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+  // Validate the developer ID...
+  it('Developer ID', async (done) => {
+    expect.assertions(1);
+
+    const developer_id = '806051504460005377';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.developer_id).toBe(developer_id);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
 });
 
 afterEach(async (done) => {
