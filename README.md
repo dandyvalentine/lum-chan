@@ -1,4 +1,4 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dandyvalentine/lum-chan/build?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dandyvalentine/lum-chan/Lum-chan!%20Control%20Integration)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ![GitHub issues](https://img.shields.io/github/issues/dandyvalentine/lum-chan?style=flat-square)
 ![GitHub](https://img.shields.io/github/license/dandyvalentine/lum-chan?style=flat-square)
