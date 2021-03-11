@@ -2,6 +2,9 @@
   "bugs": {
     "url": "https://github.com/dandyvalentine/lum-chan/issues"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "main": "./src/main.js",
   "name": "lum-chan",
   "author": "Allan D. Boswell",
