@@ -1,0 +1,29 @@
+# This workflow will do a clean install of node dependencies, build the source code, and run tests across different versions of node.
+# For more information: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions.
+
+name: Lum-chan! Control Integration
+
+on:
+  push:
+    branches: [ main ]   # Run this job for push events affecting the 'main' branch.
+  pull_request:
+    branches: [ main ]   # Run this job for pull request events affecting the 'main' branch.
+  schedule:
+    - cron: '0 0 * * *'  # Run this scheduled job daily at midnight (00:00).
+
+jobs:
+  build:
+    name: Lum-chan! Control Integration
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]  # Supported Node.js Release Schedule: https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
