@@ -69,10 +69,6 @@ describe('Verifying Configuration Document...', () => {
   });
   // Validate the features...
   it('Features', async (done) => {
-    const feature = {
-      level: false,
-      music: false
-    };
     const configuration = await Configuration.findOne({
       uuid: process.env.UUID
     });
