@@ -26,10 +26,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env:
-        UUID: ${{ secrets.UUID }}
-        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-        MONGODB_ATLAS_URI: ${{ secrets.MONGODB_ATLAS_URI }}
     - run: npm ci
     - run: npm run lint
     - run: npm run test
+      env:
+        UUID: ${{ secrets.UUID }}                            # GitHub-specific UUID value.
+        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}          # Developer-version of Lum-chan!
+        MONGODB_ATLAS_URI: ${{ secrets.MONGODB_ATLAS_URI }}  # GitHub-specific database via MongoDB Cloud.
