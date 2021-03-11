@@ -4,7 +4,7 @@
     "tabWidth": 2,
     "endOfLine": "auto",
     "proseWrap": "preserve",
-    "printWidth": 999,
+    "printWidth": 80,
     "quoteProps": "as-needed",
     "arrowParens": "always",
     "singleQuote": true,
