@@ -268,7 +268,7 @@ describe('Verifying Configuration Document...', () => {
     done();
   });
 
-  // Validate the global user blacklist...
+  // Validate the global guild blacklist...
   it('Global Guild Blacklist', async (done) => {
     expect.assertions(1);
 
