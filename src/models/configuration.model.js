@@ -13,10 +13,11 @@ const configuration_schema = new mongoose.Schema(
     mention_id: { type: String, unique: true, required: true },
     maintenance: { type: Boolean, unique: true, required: true },
     developer_id: { type: String, unique: true, required: true },
-    global_blacklist: { type: [String], unique: true, required: true },
     global_moderator: { type: [String], unique: true, required: true },
     developer_profile: { type: String, unique: true, required: true },
-    alternative_mention_id: { type: String, unique: true, required: true }
+    global_user_blacklist: { type: [String], unique: true, required: true },
+    alternative_mention_id: { type: String, unique: true, required: true },
+    global_guild_blacklist: { type: [String], unique: true, required: true }
   },
   { timestamps: true }
 );
