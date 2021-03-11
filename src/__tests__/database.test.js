@@ -33,6 +33,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the name...
   it('Name', async (done) => {
     expect.assertions(1);
@@ -50,6 +51,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the universally unique identifier...
   it('Universally Unique Identifier', async (done) => {
     expect.assertions(1);
@@ -67,6 +69,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the features...
   it('Features', async (done) => {
     const configuration = await Configuration.findOne({
@@ -86,6 +89,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the license...
   it('License', async (done) => {
     expect.assertions(1);
@@ -104,6 +108,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the version...
   it('Version', async (done) => {
     expect.assertions(1);
@@ -121,6 +126,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the Client ID...
   it('Client ID', async (done) => {
     expect.assertions(1);
@@ -138,6 +144,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the mention ID...
   it('Mention ID', async (done) => {
     expect.assertions(1);
@@ -155,6 +162,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the maintenance variable...
   it('Maintenance', async (done) => {
     expect.assertions(1);
@@ -171,6 +179,7 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+
   // Validate the developer ID...
   it('Developer ID', async (done) => {
     expect.assertions(1);
@@ -182,6 +191,93 @@ describe('Verifying Configuration Document...', () => {
 
     if (configuration) {
       expect(configuration.developer_id).toBe(developer_id);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+
+  // Validate the global moderator list...
+  it('Global Moderators', async (done) => {
+    expect.assertions(1);
+
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.global_moderator.length).toBe(0);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+
+  // Validate the developer profile...
+  it('Developer Profile', async (done) => {
+    expect.assertions(1);
+
+    const developer_profile = 'https://github.com/dandyvalentine';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.developer_profile).toBe(developer_profile);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+
+  // Validate the global user blacklist...
+  it('Global User Blacklist', async (done) => {
+    expect.assertions(1);
+
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.global_user_blacklist.length).toBe(0);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+
+  // Validate the alternative mention ID...
+  it('Alternative Mention ID', async (done) => {
+    expect.assertions(1);
+
+    const alternative_mention_id = '<@816473349282070548>';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.alternative_mention_id).toBe(alternative_mention_id);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+
+  // Validate the global user blacklist...
+  it('Global Guild Blacklist', async (done) => {
+    expect.assertions(1);
+
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.global_guild_blacklist.length).toBe(0);
     } else {
       expect(configuration).not.toBeNull(); // This will automatically fail the test.
     }
