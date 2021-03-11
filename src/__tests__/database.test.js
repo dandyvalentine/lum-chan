@@ -16,6 +16,40 @@ beforeAll(async (done) => {
 });
 
 describe('Verifying Configuration Document...', () => {
+  // Validate the uniform resource locator...
+  it('Uniform Resource Locator', async (done) => {
+    expect.assertions(1);
+
+    const url = 'https://github.com/dandyvalentine/lum-chan';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.url).toBe(url);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+  // Validate the name...
+  it('Name', async (done) => {
+    expect.assertions(1);
+
+    const name = 'Lum-chan!';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect(configuration.name).toBe(name);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
   // Validate the universally unique identifier...
   it('Universally Unique Identifier', async (done) => {
     expect.assertions(1);
