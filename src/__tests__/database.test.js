@@ -67,6 +67,30 @@ describe('Verifying Configuration Document...', () => {
 
     done();
   });
+  // Validate the features...
+  it('Features', async (done) => {
+    const feature = {
+      level: false,
+      music: false
+    };
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID
+    });
+
+    if (configuration) {
+      expect.assertions(3);
+
+      expect(configuration.feature).toBe(feature);
+      expect(configuration.feature.level).toBeFalsy();
+      expect(configuration.feature.music).toBeFalsy();
+    } else {
+      expect.assertions(1);
+
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
 });
 
 afterEach(async (done) => {
