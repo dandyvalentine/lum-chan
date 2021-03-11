@@ -11,6 +11,10 @@
     "start": "node ."
   },
   "version": "2.0.0",
+  "keywords": [
+    "bot",
+    "discord"
+  ],
   "homepage": "https://github.com/dandyvalentine/lum-chan#readme",
   "repository": {
     "type": "git",
