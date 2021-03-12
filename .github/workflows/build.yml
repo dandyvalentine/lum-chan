@@ -30,6 +30,6 @@ jobs:
     - run: npm run lint
     - run: npm run test
       env:
-        UUID: ${{ secrets.UUID }}                            # GitHub-specific UUID value.
-        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}          # Developer-version of Lum-chan!
-        MONGODB_ATLAS_URI: ${{ secrets.MONGODB_ATLAS_URI }}  # GitHub-specific database via MongoDB Cloud.
+        UUID_GITHUB: ${{ secrets.UUID_GITHUB }}                            # GitHub-specific UUID value.
+        NODE_ENV_GITHUB: ${{ secrets.NODE_ENV_GITHUB }}                    # GitHub-specific environment.
+        MONGODB_ATLAS_URI_GITHUB: ${{ secrets.MONGODB_ATLAS_URI_GITHUB }}  # GitHub-specific database via MongoDB Cloud.
