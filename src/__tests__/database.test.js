@@ -19,6 +19,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 'use strict';
+
 const mongoose = require('mongoose');
 const Configuration = require('../models/configuration.model');
 
@@ -27,7 +28,12 @@ const Configuration = require('../models/configuration.model');
  * @summary This establishes a connection to the database before each test.
  */
 beforeEach(async (done) => {
-  const url = process.env.MONGODB_ATLAS_URI;
+  // If false, testing suite is being executed locally!
+  if (!process.env.NODE_ENV_GITHUB) {
+    require('dotenv').config();
+  }
+
+  const url = process.env.MONGODB_ATLAS_URI_GITHUB;
 
   await mongoose.connect(url, {
     useCreateIndex: true,
@@ -50,7 +56,7 @@ describe('Verifying Configuration Document...', () => {
 
     const url = 'https://github.com/dandyvalentine/lum-chan';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -68,7 +74,7 @@ describe('Verifying Configuration Document...', () => {
 
     const name = 'Lum-chan!';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -84,9 +90,9 @@ describe('Verifying Configuration Document...', () => {
   it('Universally Unique Identifier', async (done) => {
     expect.assertions(1);
 
-    const uuid = process.env.UUID;
+    const uuid = process.env.UUID_GITHUB;
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -101,7 +107,7 @@ describe('Verifying Configuration Document...', () => {
   // Validate the features...
   it('Features', async (done) => {
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -125,7 +131,7 @@ describe('Verifying Configuration Document...', () => {
     const license =
       'https://github.com/dandyvalentine/lum-chan/blob/main/LICENSE';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -143,7 +149,7 @@ describe('Verifying Configuration Document...', () => {
 
     const version = '2.0.0';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -161,7 +167,7 @@ describe('Verifying Configuration Document...', () => {
 
     const client_id = '816473349282070548';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -179,7 +185,7 @@ describe('Verifying Configuration Document...', () => {
 
     const mention_id = '<@!816473349282070548>';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -196,7 +202,7 @@ describe('Verifying Configuration Document...', () => {
     expect.assertions(1);
 
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -214,7 +220,7 @@ describe('Verifying Configuration Document...', () => {
 
     const developer_id = '806051504460005377';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -231,7 +237,7 @@ describe('Verifying Configuration Document...', () => {
     expect.assertions(1);
 
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -249,7 +255,7 @@ describe('Verifying Configuration Document...', () => {
 
     const developer_profile = 'https://github.com/dandyvalentine';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -266,7 +272,7 @@ describe('Verifying Configuration Document...', () => {
     expect.assertions(1);
 
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -284,7 +290,7 @@ describe('Verifying Configuration Document...', () => {
 
     const alternative_mention_id = '<@816473349282070548>';
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {
@@ -301,7 +307,7 @@ describe('Verifying Configuration Document...', () => {
     expect.assertions(1);
 
     const configuration = await Configuration.findOne({
-      uuid: process.env.UUID
+      uuid: process.env.UUID_GITHUB
     });
 
     if (configuration) {

@@ -28,6 +28,7 @@
   "description": "Lum-chan! is an unofficial, open-source application for those who enjoy listening to the Urusei Yatsura (うる星やつら) original soundtrack.",
   "dependencies": {
     "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
     "mongoose": "^5.11.15"
   },
   "devDependencies": {
