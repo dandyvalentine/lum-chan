@@ -20,7 +20,10 @@
  */
 'use strict';
 
+let logger = null; // We will initialize this in a specific testing suite!
 const mongoose = require('mongoose');
+
+// const Log = require('../models/log.model');
 const Configuration = require('../models/configuration.model');
 
 /**
@@ -315,6 +318,62 @@ describe('Verifying Configuration Document...', () => {
     } else {
       expect(configuration).not.toBeNull(); // This will automatically fail the test.
     }
+
+    done();
+  });
+});
+
+/**
+ * @since 2.0.0
+ * @summary These series of tests ensure the integrity of the Log document.
+ */
+describe('Verifying Log Document...', () => {
+  // Initialize the logger variable...
+  beforeAll((done) => {
+    logger = require('../__mocks__/logger.mocks');
+
+    done();
+  });
+
+  // Attempt to write an information log to the database...
+  it('Writing Information Log', (done) => {
+    expect.assertions(0);
+
+    const dt = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    logger.log('info', 'This is an example of an informative log.', {
+      metadata: `TEST PERFORMED ON: ${dt}`
+    });
+
+    done();
+  });
+
+  // Attempt to write a warning log to the database...
+  it('Writing Warning Log', (done) => {
+    expect.assertions(0);
+
+    const dt = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    logger.log('warn', 'This is an example of a warning log.', {
+      metadata: `TEST PERFORMED ON: ${dt}`
+    });
+
+    done();
+  });
+
+  // Attempt to write an error log to the database...
+  it('Writing Error Log', (done) => {
+    expect.assertions(0);
+
+    const dt = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+    logger.log('error', 'This is an example of an error log.', {
+      metadata: `TEST PERFORMED ON: ${dt}`
+    });
+
+    done();
+  });
+
+  // Teardown the logger variable...
+  afterAll((done) => {
+    logger.end();
 
     done();
   });
