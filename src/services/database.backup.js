@@ -21,11 +21,11 @@
 'use strict';
 
 // Configuration libraries.
-const environment = require('../configurations/environment');
-const configuration = require('../configurations/configuration');
+// const environment = require('../configurations/environment');
+// const configuration = require('../configurations/configuration');
 
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
 // Database models.
-const Log = require('../models/log.model');
-const Configuration = require('../models/configuration.model');
+// const Log = require('../models/log.model');
+// const Configuration = require('../models/configuration.model');
