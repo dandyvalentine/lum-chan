@@ -19,6 +19,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 'use strict';
+
 const mongoose = require('mongoose');
 
 // Reference: https://github.com/dandyvalentine/lum-chan/issues/7

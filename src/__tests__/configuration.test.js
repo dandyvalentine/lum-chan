@@ -19,6 +19,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 'use strict';
+
 const configuration = require('../configurations/configuration');
 
 const url = 'https://github.com/dandyvalentine/lum-chan';

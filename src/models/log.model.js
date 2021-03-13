@@ -1,9 +1,9 @@
 /**
- * @file Primary database service for application.
+ * @file Log schema.
  * @author Allan D. Boswell
  * @license GPL-3.0
  * @version 2.0.0
- * @description The primary database service for the application.
+ * @description This is the schema representing the Log document.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,12 +20,17 @@
  */
 'use strict';
 
-// Configuration libraries.
-// const environment = require('../configurations/environment');
-// const configuration = require('../configurations/configuration');
+const mongoose = require('mongoose');
 
-// const mongoose = require('mongoose');
+// Reference: https://github.com/dandyvalentine/lum-chan/issues/10
+const log_schema = new mongoose.Schema({
+  meta: { type: String, required: true },
+  level: { type: String, required: true },
+  message: { type: String, required: true },
+  hostname: { type: String, required: true },
+  timestamp: { type: Date, required: true }
+});
 
-// Database models.
-// const Log = require('../models/log.model');
-// const Configuration = require('../models/configuration.model');
+const log = mongoose.model('Log', log_schema);
+
+module.exports = log;
