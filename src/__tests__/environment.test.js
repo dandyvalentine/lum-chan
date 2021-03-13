@@ -48,8 +48,8 @@ describe('Verifying Environment Variables...', () => {
       expect(process.env.UUID_DEVELOPMENT).toBeTruthy();
     } else {
       expect(process.env.UUID_GITHUB).toBeTruthy();
-      expect(process.env.UUID_PRODUCTION).toBeNull();
-      expect(process.env.UUID_DEVELOPMENT).toBeNull();
+      expect(process.env.UUID_PRODUCTION).toBeFalsy();
+      expect(process.env.UUID_DEVELOPMENT).toBeFalsy();
     }
 
     done();
@@ -63,8 +63,8 @@ describe('Verifying Environment Variables...', () => {
       expect(process.env.DISCORD_PRODUCTION_TOKEN).toBeTruthy();
       expect(process.env.DISCORD_DEVELOPMENT_TOKEN).toBeTruthy();
     } else {
-      expect(process.env.DISCORD_PRODUCTION_TOKEN).toBeNull();
-      expect(process.env.DISCORD_DEVELOPMENT_TOKEN).toBeNull();
+      expect(process.env.DISCORD_PRODUCTION_TOKEN).toBeFalsy();
+      expect(process.env.DISCORD_DEVELOPMENT_TOKEN).toBeFalsy();
     }
 
     done();
@@ -82,10 +82,10 @@ describe('Verifying Environment Variables...', () => {
       expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP).toBeTruthy();
     } else {
       expect(process.env.MONGODB_ATLAS_URI_GITHUB).toBeTruthy();
-      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION).toBeNull();
-      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT).toBeNull();
-      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION_BACKUP).toBeNull();
-      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP).toBeNull();
+      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION).toBeFalsy();
+      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT).toBeFalsy();
+      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION_BACKUP).toBeFalsy();
+      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP).toBeFalsy();
     }
 
     done();
