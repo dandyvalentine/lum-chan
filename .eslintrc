@@ -3,5 +3,5 @@
     "extends": ["prettier", "eslint:recommended"],
     "env": { "es6": true, "jest": true, "node": true },
     "parserOptions": { "ecmaVersion": 2019 },
-    "rules": { "prettier/prettier": "error" }
+    "rules": { "no-console": "error", "prettier/prettier": "error" }
 }
