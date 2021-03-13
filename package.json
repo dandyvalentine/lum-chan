@@ -3,6 +3,7 @@
     "url": "https://github.com/dandyvalentine/lum-chan/issues"
   },
   "jest": {
+    "testTimeout": 30000,
     "testEnvironment": "node"
   },
   "main": "./src/main.js",
