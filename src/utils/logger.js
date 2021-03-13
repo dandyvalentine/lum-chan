@@ -36,7 +36,7 @@ const logger = createLogger({
       format: format.combine(format.timestamp(), format.json()),
       silent: false,
       options: {
-        poolSize: 2,
+        poolSize: 3,
         autoReconnect: false,
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -48,7 +48,8 @@ const logger = createLogger({
       includeIds: true,
       tryReconnect: false
     })
-  ]
+  ],
+  handleExceptions: true
 });
 
 module.exports = logger;
