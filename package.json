@@ -30,7 +30,8 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "mongoose": "^5.11.15"
+    "mongoose": "^5.11.15",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
