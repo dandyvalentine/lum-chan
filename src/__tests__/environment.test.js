@@ -25,6 +25,11 @@
  * @summary Initializes this testing suite before starting.
  */
 beforeAll((done) => {
+  // If false, testing suite is being executed locally!
+  if (!process.env.NODE_ENV_GITHUB) {
+    require('dotenv').config();
+  }
+
   done();
 });
 
@@ -50,11 +55,41 @@ describe('Verifying Environment Variables...', () => {
     done();
   });
 
-  // ???
+  // Verify the tokens for Discord...
+  it('Discord Token', (done) => {
+    expect.assertions(2);
 
-  // ???
+    if (!process.env.NODE_ENV_GITHUB) {
+      expect(process.env.DISCORD_PRODUCTION_TOKEN).toBeTruthy();
+      expect(process.env.DISCORD_DEVELOPMENT_TOKEN).toBeTruthy();
+    } else {
+      expect(process.env.DISCORD_PRODUCTION_TOKEN).toBeNull();
+      expect(process.env.DISCORD_DEVELOPMENT_TOKEN).toBeNull();
+    }
 
-  // ???
+    done();
+  });
+
+  // Verify the MongoDB Cloud uniform resource identifiers...
+  it('MongoDB Cloud Uniform Resource Identifier', (done) => {
+    expect.assertions(5);
+
+    if (!process.env.NODE_ENV_GITHUB) {
+      expect(process.env.MONGODB_ATLAS_URI_GITHUB).toBeTruthy();
+      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION).toBeTruthy();
+      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT).toBeTruthy();
+      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION_BACKUP).toBeTruthy();
+      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP).toBeTruthy();
+    } else {
+      expect(process.env.MONGODB_ATLAS_URI_GITHUB).toBeTruthy();
+      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION).toBeNull();
+      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT).toBeNull();
+      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION_BACKUP).toBeNull();
+      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP).toBeNull();
+    }
+
+    done();
+  });
 });
 
 /**
