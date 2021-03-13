@@ -27,4 +27,5 @@ const configuration = require('../configurations/configuration');
 const mongoose = require('mongoose');
 
 // Database models.
+const Log = require('../models/log.model');
 const Configuration = require('../models/configuration.model');
