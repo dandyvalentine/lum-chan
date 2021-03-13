@@ -23,28 +23,30 @@
 // Configuration library.
 const environment = require('../configurations/environment');
 
-const root = require('app-root-path');
 const { format, transports, createLogger } = require('winston');
 require('winston-mongodb');
 
 const logger = createLogger({
   transports: [
-    new transports.File({
-      level: 'info',
-      format: format.combine(format.timestamp(), format.json()),
-      maxsize: 5242880,
-      filename: `${root}/logs/lum.log`,
-      maxFiles: 5
-    }),
     // Example: logger.log('error', 'An exception!', { metadata: error.stack });
     new transports.MongoDB({
       db: environment.get_atlas_uri(),
-      level: 'error',
+      level: 'info',
+      capped: false,
       format: format.combine(format.timestamp(), format.json()),
+      silent: false,
       options: {
+        poolSize: 2,
+        autoReconnect: false,
+        useNewUrlParser: true,
         useUnifiedTopology: true
       },
-      collection: 'logs'
+      storeHost: true,
+      cappedSize: 10000000,
+      collection: 'logs',
+      decolorize: false,
+      includeIds: true,
+      tryReconnect: false
     })
   ]
 });
