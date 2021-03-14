@@ -20,6 +20,7 @@
  */
 'use strict';
 
+const path = require('path');
 const root = require('app-root-path');
 
 /**
@@ -30,7 +31,14 @@ const root = require('app-root-path');
  */
 module.exports.playlist = {
   TRACK01: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/01 - Lum no Love Song.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '01 - Lum no Love Song.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -43,7 +51,14 @@ module.exports.playlist = {
     artist_jp: '松谷祐子'
   },
   TRACK02: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/02 - Uchuu wa Taihen da!.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '02 - Uchuu wa Taihen da!.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -56,7 +71,14 @@ module.exports.playlist = {
     artist_jp: '松谷祐子'
   },
   TRACK03: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/03 - Kokoro Bosoi na.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '03 - Kokoro Bosoi na.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -69,7 +91,14 @@ module.exports.playlist = {
     artist_jp: 'ヘレン笹野'
   },
   TRACK04: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/04 - Margarita.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '04 - Margarita.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -82,7 +111,14 @@ module.exports.playlist = {
     artist_jp: 'ヘレン笹野'
   },
   TRACK05: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/05 - Hoshizora Cycling.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '05 - Hoshizora Cycling.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -95,7 +131,14 @@ module.exports.playlist = {
     artist_jp: 'ヴァージンVS'
   },
   TRACK06: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/06 - Moonlight Coaster.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '06 - Moonlight Coaster.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -108,7 +151,14 @@ module.exports.playlist = {
     artist_jp: 'ヴァージンVS'
   },
   TRACK07: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/07 - I, I, You & Ai.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '07 - I, I, You & Ai.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -121,7 +171,14 @@ module.exports.playlist = {
     artist_jp: '小林泉美'
   },
   TRACK08: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/08 - LOVE GAME.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '08 - LOVE GAME.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -134,7 +191,14 @@ module.exports.playlist = {
     artist_jp: '小林泉美'
   },
   TRACK09: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/09 - Kage Fumi no Waltz.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '09 - Kage Fumi no Waltz.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -147,7 +211,14 @@ module.exports.playlist = {
     artist_jp: '詩織'
   },
   TRACK10: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/10 - SING SING FOR ME.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '10 - SING SING FOR ME.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -160,7 +231,14 @@ module.exports.playlist = {
     artist_jp: '詩織'
   },
   TRACK11: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/11 - Lum no Ballad.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '11 - Lum no Ballad.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -173,7 +251,14 @@ module.exports.playlist = {
     artist_jp: '平野文'
   },
   TRACK12: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/12 - Koi ni Dance! Dance! Dance!.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '12 - Koi ni Dance! Dance! Dance!.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -186,7 +271,14 @@ module.exports.playlist = {
     artist_jp: '平野文'
   },
   TRACK13: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/13 - Dancing Star.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '13 - Dancing Star.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -199,7 +291,14 @@ module.exports.playlist = {
     artist_jp: '小林泉美'
   },
   TRACK14: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/14 - Yume wa Love me more.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '14 - Yume wa Love me more.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -212,7 +311,14 @@ module.exports.playlist = {
     artist_jp: '小林泉美'
   },
   TRACK15: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/15 - Ai wa Boomerang.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '15 - Ai wa Boomerang.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -225,7 +331,14 @@ module.exports.playlist = {
     artist_jp: '松谷祐子'
   },
   TRACK16: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/16 - Nebokemanako.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '16 - Nebokemanako.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -238,7 +351,14 @@ module.exports.playlist = {
     artist_jp: '松谷祐子'
   },
   TRACK17: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/17 - Pajama Jama Da!!.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '17 - Pajama Jama Da!!.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -251,7 +371,14 @@ module.exports.playlist = {
     artist_jp: '成清加奈子'
   },
   TRACK18: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/18 - Oshare Freak.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '18 - Oshare Freak.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -264,7 +391,14 @@ module.exports.playlist = {
     artist_jp: '成清加奈子'
   },
   TRACK19: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/19 - Koi no Moebius.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '19 - Koi no Moebius.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -277,7 +411,14 @@ module.exports.playlist = {
     artist_jp: 'リッツ'
   },
   TRACK20: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/20 - Pajama Jama Da!!.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '20 - Pajama Jama Da!!.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -290,7 +431,14 @@ module.exports.playlist = {
     artist_jp: 'リッツ'
   },
   TRACK21: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/21 - Fushigi-Kirei.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '21 - Fushigi-Kirei.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -303,7 +451,14 @@ module.exports.playlist = {
     artist_jp: '平野文'
   },
   TRACK22: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/22 - Yasashi Sugiru Keshiki.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '22 - Yasashi Sugiru Keshiki.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -316,7 +471,14 @@ module.exports.playlist = {
     artist_jp: '平野文'
   },
   TRACK23: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/23 - Koi no Moebius.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '23 - Koi no Moebius.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -329,7 +491,14 @@ module.exports.playlist = {
     artist_jp: 'リッツ'
   },
   TRACK24: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/24 - Midnight Television.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '24 - Midnight Television.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -342,7 +511,14 @@ module.exports.playlist = {
     artist_jp: 'ヴァージンVS'
   },
   TRACK25: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/25 - Chance On Love.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '25 - Chance On Love.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -355,7 +531,14 @@ module.exports.playlist = {
     artist_jp: 'シンディ'
   },
   TRACK26: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/26 - Open Invitation.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '26 - Open Invitation.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -368,7 +551,14 @@ module.exports.playlist = {
     artist_jp: 'シンディ'
   },
   TRACK27: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/27 - Born To Be Free.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '27 - Born To Be Free.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -381,7 +571,14 @@ module.exports.playlist = {
     artist_jp: 'ステファニー'
   },
   TRACK28: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/28 - Remember My Love.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '28 - Remember My Love.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -394,7 +591,14 @@ module.exports.playlist = {
     artist_jp: 'ステファニー'
   },
   TRACK29: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/29 - Rock The Planet.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '29 - Rock The Planet.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -407,7 +611,14 @@ module.exports.playlist = {
     artist_jp: 'ステファニー'
   },
   TRACK30: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/30 - Every Day.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '30 - Every Day.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -420,7 +631,14 @@ module.exports.playlist = {
     artist_jp: 'ステファニー'
   },
   TRACK31: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/31 - Tonogata Gomen Asobase.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '31 - Tonogata Gomen Asobase.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -433,7 +651,14 @@ module.exports.playlist = {
     artist_jp: '南翔子'
   },
   TRACK32: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/32 - Good Luck ~Eien Yori Ai o Komete~.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '32 - Good Luck ~Eien Yori Ai o Komete~.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -446,7 +671,14 @@ module.exports.playlist = {
     artist_jp: '南翔子'
   },
   TRACK33: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/33 - Half Moon wa Tokimeki Iro.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '33 - Half Moon wa Tokimeki Iro.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -459,7 +691,14 @@ module.exports.playlist = {
     artist_jp: '南翔子'
   },
   TRACK34: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/34 - Matsurika Yoru -Jasmine Night-.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '34 - Matsurika Yoru -Jasmine Night-.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -472,7 +711,14 @@ module.exports.playlist = {
     artist_jp: '南翔子'
   },
   TRACK35: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/35 - Triangle Love Letter.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '35 - Triangle Love Letter.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -485,7 +731,14 @@ module.exports.playlist = {
     artist_jp: '松下丸子'
   },
   TRACK36: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/36 - Dream Forever.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '36 - Dream Forever.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -498,7 +751,14 @@ module.exports.playlist = {
     artist_jp: '瀬戸口さゆり'
   },
   TRACK37: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/37 - Melancholy no Kiseki.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '37 - Melancholy no Kiseki.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -511,7 +771,14 @@ module.exports.playlist = {
     artist_jp: '松永夏代子'
   },
   TRACK38: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/38 - Sayonara Bobby.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '38 - Sayonara Bobby.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -524,7 +791,14 @@ module.exports.playlist = {
     artist_jp: '松永夏代子'
   },
   TRACK39: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/39 - A-RI-GA-TO!.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '39 - A-RI-GA-TO!.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -537,7 +811,14 @@ module.exports.playlist = {
     artist_jp: 'うる星やつらオールスターズ'
   },
   TRACK40: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/40 - Hoshi no Memory.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '40 - Hoshi no Memory.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -550,7 +831,14 @@ module.exports.playlist = {
     artist_jp: 'うる星やつらオールスターズ'
   },
   TRACK41: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/41 - Sweet Dream.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '41 - Sweet Dream.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -563,7 +851,14 @@ module.exports.playlist = {
     artist_jp: '成清加奈子'
   },
   TRACK42: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/42 - Romance ga Itai.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '42 - Romance ga Itai.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -576,7 +871,14 @@ module.exports.playlist = {
     artist_jp: '成清加奈子'
   },
   TRACK43: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/43 - Monotone no Yatsu.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '43 - Monotone no Yatsu.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -589,7 +891,14 @@ module.exports.playlist = {
     artist_jp: '松永夏代子'
   },
   TRACK44: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/44 - Jounetsu no Azalea.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '44 - Jounetsu no Azalea.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -602,7 +911,14 @@ module.exports.playlist = {
     artist_jp: '松永夏代子・成清加奈子'
   },
   TRACK45: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/45 - SORRY....mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '45 - SORRY....mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -615,7 +931,14 @@ module.exports.playlist = {
     artist_jp: '成清加奈子'
   },
   TRACK46: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/46 - I Love You Lum.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '46 - I Love You Lum.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -628,7 +951,14 @@ module.exports.playlist = {
     artist_jp: '成清加奈子・松永夏代子'
   },
   TRACK47: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/47 - Suki-Kirai.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '47 - Suki-Kirai.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
@@ -641,7 +971,14 @@ module.exports.playlist = {
     artist_jp: '麻田華子'
   },
   TRACK48: {
-    path: `${root}/assets/Urusei Yatsura - CD Single Memorial File/48 - Kimi ga Wakaru yo.mp3`,
+    path:
+      `${root}` +
+      path.sep +
+      'assets' +
+      path.sep +
+      'Urusei Yatsura - CD Single Memorial File' +
+      path.sep +
+      '48 - Kimi ga Wakaru yo.mp3',
     rate: '320kbps',
     year: '1988',
     cover: `${root}/assets/Urusei Yatsura - CD Single Memorial File/album_cover.jpg`,
