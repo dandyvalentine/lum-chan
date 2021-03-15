@@ -78,14 +78,10 @@ describe('Verifying Environment Variables...', () => {
       expect(process.env.MONGODB_ATLAS_URI_GITHUB).toBeTruthy();
       expect(process.env.MONGODB_ATLAS_URI_PRODUCTION).toBeTruthy();
       expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT).toBeTruthy();
-      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION_BACKUP).toBeTruthy();
-      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP).toBeTruthy();
     } else {
       expect(process.env.MONGODB_ATLAS_URI_GITHUB).toBeTruthy();
       expect(process.env.MONGODB_ATLAS_URI_PRODUCTION).toBeFalsy();
       expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT).toBeFalsy();
-      expect(process.env.MONGODB_ATLAS_URI_PRODUCTION_BACKUP).toBeFalsy();
-      expect(process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP).toBeFalsy();
     }
 
     done();
