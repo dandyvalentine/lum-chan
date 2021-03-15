@@ -72,7 +72,7 @@ describe('Verifying Environment Variables...', () => {
 
   // Verify the MongoDB Cloud uniform resource identifiers...
   it('MongoDB Cloud Uniform Resource Identifier', (done) => {
-    expect.assertions(5);
+    expect.assertions(3);
 
     if (!process.env.NODE_ENV_GITHUB) {
       expect(process.env.MONGODB_ATLAS_URI_GITHUB).toBeTruthy();
