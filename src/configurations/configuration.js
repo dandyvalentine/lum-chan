@@ -20,6 +20,8 @@
  */
 'use strict';
 
+let img = null;
+let inv = null;
 let url = null;
 let name = null;
 let uuid = null;
@@ -35,6 +37,46 @@ let developer_profile = null;
 let global_user_blacklist = null;
 let alternative_mention_id = null;
 let global_guild_blacklist = null;
+
+/**
+ * Returns a uniform resource locator of the Lum-chan! image.
+ *
+ * @since 2.0.0
+ * @returns { String } uniform resource locator
+ */
+module.exports.get_img = function () {
+  return img;
+};
+
+/**
+ * Sets a new uniform resource locator of the Lum-chan! image.
+ *
+ * @since 2.0.0
+ * @param { String } new_img new uniform resource locator
+ */
+module.exports.set_img = function (new_img) {
+  img = new_img;
+};
+
+/**
+ * Returns a uniform resource locator of the UY & Chill Discord server.
+ *
+ * @since 2.0.0
+ * @returns { String } uniform resource locator
+ */
+module.exports.get_inv = function () {
+  return inv;
+};
+
+/**
+ * Sets a new uniform resource locator of the UY & Chill Discord server.
+ *
+ * @since 2.0.0
+ * @param { String } new_inv new uniform resource locator
+ */
+module.exports.set_inv = function (new_inv) {
+  inv = new_inv;
+};
 
 /**
  * Returns a uniform resource locator of the Lum-chan! repository.
