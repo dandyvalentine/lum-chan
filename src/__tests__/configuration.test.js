@@ -22,6 +22,9 @@
 
 const configuration = require('../configurations/configuration');
 
+const img =
+  'https://i.pinimg.com/originals/d7/13/04/d713046ec7931651e0e2996450d58cfb.gif';
+const inv = 'https://discord.gg/6F8HdGK3VE';
 const url = 'https://github.com/dandyvalentine/lum-chan';
 const name = 'Lum-chan!';
 const uuid = '9ed9a8cf-3f41-4f40-9108-b88515ce2a83'; // This is not a universally unique identifier used in the application.
@@ -43,6 +46,8 @@ const global_guild_blacklist = ['816469264827285514'];
  * @summary This initializes the Configuration source file before the testing suite begins.
  */
 beforeAll((done) => {
+  configuration.set_img(img);
+  configuration.set_inv(inv);
   configuration.set_url(url);
   configuration.set_name(name);
   configuration.set_uuid(uuid);
@@ -67,6 +72,24 @@ beforeAll((done) => {
  * @summary These series of tests ensure the integrity of the Configuration source file.
  */
 describe('Verifying Configuration Methods...', () => {
+  // Validate get_img() and set_img(new_img) methods...
+  it('get_img()', (done) => {
+    expect.assertions(1);
+
+    expect(configuration.get_img()).toBe(img);
+
+    done();
+  });
+
+  // Validate get_inv() and set_inv(new_inv) methods...
+  it('get_inv()', (done) => {
+    expect.assertions(1);
+
+    expect(configuration.get_inv()).toBe(inv);
+
+    done();
+  });
+
   // Validate get_url() and set_url(new_url) methods...
   it('get_url()', (done) => {
     expect.assertions(1);
