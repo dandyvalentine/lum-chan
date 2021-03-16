@@ -89,6 +89,41 @@ describe('Verifying Configuration Document...', () => {
     done();
   });
 
+  // Validate the image.
+  it('Image', async (done) => {
+    expect.assertions(1);
+
+    const img =
+      'https://i.pinimg.com/originals/d7/13/04/d713046ec7931651e0e2996450d58cfb.gif';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID_GITHUB
+    });
+
+    if (configuration) {
+      expect(configuration.img).toBe(img);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+
+  // Validate the invite code.
+  it('Invite', async (done) => {
+    const inv = 'https://discord.gg/6F8HdGK3VE';
+    const configuration = await Configuration.findOne({
+      uuid: process.env.UUID_GITHUB
+    });
+
+    if (configuration) {
+      expect(configuration.inv).toBe(inv);
+    } else {
+      expect(configuration).not.toBeNull(); // This will automatically fail the test.
+    }
+
+    done();
+  });
+
   // Validate the universally unique identifier...
   it('Universally Unique Identifier', async (done) => {
     expect.assertions(1);
