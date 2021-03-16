@@ -25,6 +25,8 @@ const mongoose = require('mongoose');
 // Reference: https://github.com/dandyvalentine/lum-chan/issues/7
 const configuration_schema = new mongoose.Schema(
   {
+    img: { type: String, unique: true, required: true },
+    inv: { type: String, unique: true, required: true },
     url: { type: String, unique: true, required: true },
     name: { type: String, unique: true, required: true },
     uuid: { type: String, unique: true, required: true },
