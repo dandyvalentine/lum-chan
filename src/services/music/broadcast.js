@@ -209,8 +209,8 @@ function shuffle(array) {
  * Initializes the broadcasting service.
  *
  * @since 2.0.0
- * @param { Discord.Client } client reference to Discord client
- * @param { winston.createLogger } logger reference to logging utility
+ * @param { Object } client reference to Discord client
+ * @param { Object } logger reference to logging utility
  */
 module.exports.init = function (client, logger) {
   if (no_errors(error)) {
