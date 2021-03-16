@@ -64,17 +64,3 @@ module.exports.get_atlas_uri = function () {
     return process.env.MONGODB_ATLAS_URI_PRODUCTION;
   }
 };
-
-/**
- * Returns the environment variable responsible for the backup database credentials for MongoDB Cloud.
- *
- * @since 2.0.0
- * @returns { String } MongoDB Cloud uniform resource identifier
- */
-module.exports.get_atlas_backup_uri = function () {
-  if (process.env.NODE_ENV === 'development') {
-    return process.env.MONGODB_ATLAS_URI_DEVELOPMENT_BACKUP;
-  } else if (process.env.NODE_ENV === 'production') {
-    return process.env.MONGODB_ATLAS_URI_PRODUCTION_BACKUP;
-  }
-};
